@@ -23,6 +23,9 @@ class HomeFragment : Fragment() {
                 ViewModelProvider(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val textView: TextView = root.findViewById(R.id.text_home)
+
+        textView.text = getString(R.string.workwithAndroid)
+        textView.textSize = 24f
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })

@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.franco.gitpractice.ui.home.HomeFragment"
+        android:name="com.franco.gitpractice.ui.uiLogging.Loging"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_loging" />
 
     <fragment
         android:id="@+id/navigation_dashboard"

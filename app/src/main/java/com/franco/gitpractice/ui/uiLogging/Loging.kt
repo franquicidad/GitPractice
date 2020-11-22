@@ -20,16 +20,18 @@ class Loging : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         logingViewModel =
-                ViewModelProvider(this).get(LogingViewModel::class.java)
+            ViewModelProvider(this).get(LogingViewModel::class.java)
         val binding = FragmentLogingBinding.inflate(layoutInflater)
 
         with(binding.textHome) {
             text = getString(R.string.workwithAndroid)
             textSize = 24f
         }
+        with(binding) {
+            button1.setOnClickListener {
 
-        binding.button1.setOnClickListener {
-            binding.button1.text = "kotlin basic"
+            }
+            textHome.text = "kotlin basic"
         }
 
         logingViewModel.text.observe(viewLifecycleOwner, Observer {
